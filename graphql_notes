@@ -1,0 +1,112 @@
+
+<!-- more time to config #sighs -->
+generate documentation with spectaql if introspection enabled.
+
+introspection query
+https://github.com/dolevf/Black-Hat-GraphQL/blob/master/queries/introspection_query.txt
+
+graphql voyager
+http://lab.blackhatgraphql.com:9000/
+
+-   schema getting directive description
+
+```gql
+query GetDirectives {
+    __schema {
+        directives {
+            name
+            description
+            locations
+        }
+    }
+}
+```
+
+-   spoofing operationNames to bypass filters
+
+```gql
+mutation SpoofedOperationName {
+    createPaste(
+        title: "Black Hat GraphQL"
+        content: "I just spoofed the operation name."
+    ) {
+        paste {
+            content
+            title
+        }
+    }
+}
+```
+
+-   Returns mutations that exist in a schema
+
+```gql
+query {
+    __schema {
+        mutationType {
+            fields {
+                name
+            }
+        }
+    }
+}
+```
+
+-   inrospection query to extract query field names
+
+    ```gql
+    query {
+        __schema {
+            queryType {
+                fields {
+                    name
+                }
+            }
+        }
+    }
+    ```
+
+- An introspection query for discovering fields within an object of interest
+
+```gql
+query {
+    __type(name: "PasteObject") {
+        name
+        kind
+        fields {
+            name
+            type {
+                name
+                kind
+            }
+        }
+    }
+}
+```
+
+-   introspection query for schema types
+
+```gql
+query {
+    __schema {
+        types {
+            name
+        }
+    }
+}
+```
+
+```gql
+query {
+    __schema {
+        subscriptionType {
+            fields {
+                name
+            }
+        }
+    }
+}
+```
+
+circular queries
+inql -f /home/kali/introspection_query.json --generate-cycles -o dvga_cycles
