@@ -52,6 +52,25 @@ query {
 }
 ```
 
+-   extension for above command to know what types and args a mutation takes
+
+```gql
+query {
+    __type(name: "YourMutationName") {
+        name
+        kind
+        description
+        inputFields {
+            name
+            type {
+                name
+                kind
+            }
+        }
+    }
+}
+```
+
 -   inrospection query to extract query field names
 
     ```gql
