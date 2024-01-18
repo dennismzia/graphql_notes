@@ -1,5 +1,5 @@
-
 <!-- more time to config #sighs -->
+
 generate documentation with spectaql if introspection enabled.
 
 introspection query
@@ -66,7 +66,32 @@ query {
     }
     ```
 
-- An introspection query for discovering fields within an object of interest
+-   extension of above command but returns the type and names of the fields
+
+```gql
+query {
+    __schema {
+        queryType {
+            fields {
+                name
+                type {
+                    name
+                    kind
+                    ofType {
+                        name
+                        kind
+                        fields {
+                            name
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+-   An introspection query for discovering fields within an object of interest
 
 ```gql
 query {
@@ -109,4 +134,7 @@ query {
 ```
 
 circular queries
+
+```cli
 inql -f /home/kali/introspection_query.json --generate-cycles -o dvga_cycles
+```
