@@ -11,6 +11,7 @@ http://lab.blackhatgraphql.com:9000/
 -   schema getting directive description
 
 ```gql
+
 query GetDirectives {
     __schema {
         directives {
@@ -20,11 +21,13 @@ query GetDirectives {
         }
     }
 }
+
 ```
 
 -   spoofing operationNames to bypass filters
 
 ```gql
+
 mutation SpoofedOperationName {
     createPaste(
         title: "Black Hat GraphQL"
@@ -36,11 +39,13 @@ mutation SpoofedOperationName {
         }
     }
 }
+
 ```
 
 -   Returns mutations that exist in a schema
 
 ```gql
+
 query {
     __schema {
         mutationType {
@@ -50,11 +55,13 @@ query {
         }
     }
 }
+
 ```
 
 -   extension for above command to know what types and args a mutation takes
 
 ```gql
+
 query {
     __type(name: "YourMutationName") {
         name
@@ -69,11 +76,13 @@ query {
         }
     }
 }
+
 ```
 
 -   inrospection query to extract query field names
 
     ```gql
+
     query {
         __schema {
             queryType {
@@ -83,11 +92,13 @@ query {
             }
         }
     }
+
     ```
 
 -   extension of above command but returns the type and names of the fields
 
 ```gql
+
 query {
     __schema {
         queryType {
@@ -108,11 +119,13 @@ query {
         }
     }
 }
+
 ```
 
 -   An introspection query for discovering fields within an object of interest
 
 ```gql
+
 query {
     __type(name: "PasteObject") {
         name
@@ -126,11 +139,13 @@ query {
         }
     }
 }
+
 ```
 
 -   introspection query for schema types
 
 ```gql
+
 query {
     __schema {
         types {
@@ -138,9 +153,11 @@ query {
         }
     }
 }
+
 ```
 
 ```gql
+
 query {
     __schema {
         subscriptionType {
@@ -150,10 +167,13 @@ query {
         }
     }
 }
+
 ```
 
 circular queries
 
-```cli
+```bash
+
 inql -f /home/kali/introspection_query.json --generate-cycles -o dvga_cycles
+
 ```
