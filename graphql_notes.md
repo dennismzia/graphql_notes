@@ -95,6 +95,9 @@ query {
 
     ```
 
+
+
+
 -   extension of above command but returns the type and names of the fields
 
 ```gql
@@ -141,6 +144,24 @@ query {
 }
 
 ```
+
+- introspection query that extends above use this if above returns null
+```gql
+query {
+    __type(name: "PayflowLinkTokenInput") {
+        name
+        kind
+        inputFields {
+            name
+            type {
+                name
+                kind
+            }
+        }
+    }
+}
+```
+
 
 -   introspection query for schema types
 
