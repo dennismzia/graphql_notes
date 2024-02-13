@@ -7,6 +7,7 @@ gcloud compute scp --zone "us-west1-a" --recurse cloud-instance-1:~/engagements/
 gcloud compute scp --recurse cloud-instance-1:~/engagements/cognism/jsfiles .
 gcloud compute scp --zone "us-central1-f" --recurse cloud-instance-1:~/engagements/* .
 aputime.com
+
 gcloud compute ssh  "cloud-instance-1" --project "security-assessment-project" --zone "us-central1-f"
 ```
 
