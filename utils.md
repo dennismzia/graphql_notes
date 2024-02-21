@@ -102,6 +102,11 @@ nohup ffuf -t 10 -request req.txt -w ~/wordlist/raft-large-directories.txt -mc 2
 
 nohup ffuf -t 10 -u $DOMAIN -w ~/wordlist/raft-large-directories.txt -mc 200,429,405,401,403,201 -ic -e .js,.conf,.log,.zip,.bac,.bak,.cache,.save,.tar.gz,.tgz,.templ,.xml,.txt,.tar,.jar,.inc,.ini,.dist,.db,.sql,.aspx,.asp,.rar,.xlsx,.dll,.csv,.xsl,.tmp,.config,.pdf,.doc,.json,.jsp,.conf,.html -o ffuf_output -sf > out.log 2>&1 &
 ```
+- extracting from field stuffing attack
+```bash
+cat response | jq | grep -io 'Did you mean.*'|  sed 's/Did you mean//' | grep -o '[[:alnum:]]\+' |deduplicate
+```
+
 
 ```bash
 #!/bin/bash
