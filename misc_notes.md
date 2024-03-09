@@ -15,3 +15,9 @@ url would look like
 https://youraccount.blob.core.windows.net/?restype=container&comp=list&sv=2022-11-02&se=2023-05-24T09:51:36Z&sp=r&sig=<signature>
 
 ```
+
+```js
+console.log(__BUILD_MANIFEST.sortedPages) // all paths for Next.js websites
+
+window.__NEXT_DATA__.props.pageProps //returns back the data object passed from the server-side
+```
