@@ -1,3 +1,12 @@
+-   logging into cloud
+
+```bash
+gcloud compute ssh  "cloud-instance-1" --project "security-assessment-project" --zone "us-central1-f"
+```
+
+
+
+
 -   for copying from gcloud to local machine
 
 ```bash
@@ -7,11 +16,14 @@ gcloud compute scp --zone "us-central1-f" --recurse cloud-instance-1:~/engagemen
 aputime.com
 ```
 
--   logging into cloud
+-   copying multiple files from server to local machine
 
 ```bash
-gcloud compute ssh  "cloud-instance-1" --project "security-assessment-project" --zone "us-central1-f"
+while IFS= read -r DOMAIN ; do
+    gcloud compute scp --recurse cloud-instance-1:~/engagements/$DOMAIN .
+done < foundsites.txt 
 ```
+
 
 -   copying file from local machine to remote instance
 
@@ -175,13 +187,7 @@ while IFS= read -r DOMAIN ; do
 echo $DOMAIN
 done < wildcards.txt
 
--   copying multiple files from server to local machine
 
-````bash
-while IFS= read -r DOMAIN ; do
-    gcloud compute scp --recurse cloud-instance-1:~/engagements/$DOMAIN .
-done < foundsites.txt ```
-````
 
 -   extract mutations from introspec urls
 
