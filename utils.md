@@ -125,6 +125,9 @@ naabu -list basedomain.txt -top-ports 1000 -exclude-ports 80,443,21,22,25 -o por
 # All ports port scan.
 naabu -list basedomain.txt -p -  -exclude-ports 80,443,21,22,25 -o ports.txt
 
+# optimized
+naabu -p - -rate 2000 -c 50 -retries 2 -warm-up-time 1 -silent -host $DOMAIN -nmap-cli 'nmap -sV -oX scan.xml'
+
 ```
 
 -   searching urls in archives
