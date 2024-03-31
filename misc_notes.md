@@ -19,6 +19,13 @@ https://github.com/netsecurity-as/subfuz/blob/master/subdomain_megalist.txt
 ```bash
 ffuf -w /subdomain_megalist.txt -u 'https://adminFUZZ.Target.com' -c  -t 350 -mc all  -fs 0
 
+# example
+admin-FUZZ.target.com E.G: admin-stg.target.com
+FUZZ-admin.target.com E.G: cert-admin.target.com
+adminFUZZ.target.com  E.G: admintest.target.com
+FUZZadmin.target.com  E.G  testadmin.target.com
+admin.FUZZ.target.com E.G: admin.dev.target.com
+
 ```
 
 url would look like
