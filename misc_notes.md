@@ -10,8 +10,19 @@ http://web.archive.org/cdx/search/cdx?url=google.com%2Fapi%2F*&output=text&fl=or
 
 Azure shared access signature ie sas token if it doesnt have the appropriate expiration dat e or limit then attack here is to download and big blob (data) like 200GB and download it 10 times that will cause the usage to go up to 2TB.
 
-url would look like
+- subdomain enumeration idea. looking for staging test or dev sites always helps
+
+```js 
+https://github.com/netsecurity-as/subfuz/blob/master/subdomain_megalist.txt 
 ```
+
+```bash
+ffuf -w /subdomain_megalist.txt -u 'https://adminFUZZ.Target.com' -c  -t 350 -mc all  -fs 0
+
+```
+
+url would look like
+```js
 https://youraccount.blob.core.windows.net/?restype=container&comp=list&sv=2022-11-02&se=2023-05-24T09:51:36Z&sp=r&sig=<signature>
 
 ```
