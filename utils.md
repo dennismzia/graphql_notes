@@ -50,7 +50,7 @@ Fuzzing.
 parameter Fuzzing
 
 ```bash
-cat target.list | xargs -n 1 -I {} python3 ~/ParamSpider/paramspider.py --domain {} --level high | urldedupe >> all_spiderparamters.txt
+cat target.list | xargs -n 1 -I {} python3 ~/ParamSpider/paramspider.py --domain {} --level high | sort -u  >> all_spiderparamters.txt
 
 ```
 
