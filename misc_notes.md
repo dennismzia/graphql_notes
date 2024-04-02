@@ -28,6 +28,14 @@ admin.FUZZ.target.com E.G: admin.dev.target.com
 
 ```
 
+- cencys
+```js
+1. openup https://search.censys.io/
+2.Search the keyword with virtual host only-
+`(services.tls.certificates.leaf_data.names: anywebsite.com) and services.http.response.status_code=”200"`
+
+```
+
 url would look like
 ```js
 https://youraccount.blob.core.windows.net/?restype=container&comp=list&sv=2022-11-02&se=2023-05-24T09:51:36Z&sp=r&sig=<signature>

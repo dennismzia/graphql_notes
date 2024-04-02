@@ -1,6 +1,7 @@
 about subdomain enumeration different technique.
 https://sidxparab.gitbook.io/subdomain-enumeration-guide/introduction/prequisites
 https://medium.com/@HX007/subdomain-fuzzing-worth-35k-bounty-daebcb56d9bc
+https://infosecwriteups.com/how-i-got-owned-a-multi-billion-dollar-retailers-mysql-databases-using-simple-sql-injection-30f8b0dfd9ce
 
 
 postmessage
