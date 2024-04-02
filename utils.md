@@ -47,6 +47,13 @@ cat response | jq | grep -io 'Did you mean.*'|  sed 's/Did you mean//' | grep -o
 
 Fuzzing.
 
+parameter Fuzzing
+
+```bash
+cat target.list | xargs -n 1 -I {} python3 ~/ParamSpider/paramspider.py --domain {} --level high | urldedupe >> all_spiderparamters.txt
+
+```
+
 scanning multiple targets with ffuf
 
 ```bash

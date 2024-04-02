@@ -39,3 +39,7 @@ console.log(__BUILD_MANIFEST.sortedPages) // all paths for Next.js websites
 
 window.__NEXT_DATA__.props.pageProps //returns back the data object passed from the server-side
 ```
+
+CORS* Burp Extension. 
+scans for cors misconfigurations.
+
