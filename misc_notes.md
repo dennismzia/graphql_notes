@@ -52,8 +52,9 @@ CORS* Burp Extension.
 scans for cors misconfigurations.
 
 ### fuzzing for xss
+```html
 I initiated <mark>fuzzing</mark>on the <mark>sign-up</mark> page using a wordlist of ==JavaScript variable names==.
 
 During this process, I observed that a parameter name `appURL` was being ==reflected== within a script tag.
-
+```
 
