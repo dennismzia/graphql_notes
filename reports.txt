@@ -6,3 +6,4 @@ https://infosecwriteups.com/how-i-got-owned-a-multi-billion-dollar-retailers-mys
 
 postmessage
 https://web.archive.org/web/20211016075506/https://insight.claranet.co.uk/technical-blogs/hunting-postmessage-vulnerabilitieshttps://thefrogsec.github.io/2024/04/06/How-we-escalated-a-DOM-XSS-to-a-sophisticated-1-click-Account-Takeover-for-8000-Part-2/
+https://blog.voorivex.team/9240-bounty-in-30-days-hunt-challenge
