@@ -28,12 +28,17 @@ admin.FUZZ.target.com E.G: admin.dev.target.com
 
 ```
 
+
 - cencys
 ```js
 1. openup https://search.censys.io/
 2.Search the keyword with virtual host only-
 `(services.tls.certificates.leaf_data.names: anywebsite.com) and services.http.response.status_code=”200"`
 
+```
+- cencys fancy search
+```html
+https://gpt.censys.io/
 ```
 
 url would look like
