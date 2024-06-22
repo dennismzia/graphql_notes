@@ -1,0 +1,10 @@
+/config.json
+/.git
+/web.config
+/server-status
+/backup.zip
+/.DS_Store
+/v2/_catalog
+/metadata.json
+/api.env
+

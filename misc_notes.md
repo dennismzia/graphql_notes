@@ -10,10 +10,10 @@ http://web.archive.org/cdx/search/cdx?url=google.com%2Fapi%2F*&output=text&fl=or
 
 Azure shared access signature ie sas token if it doesnt have the appropriate expiration dat e or limit then attack here is to download and big blob (data) like 200GB and download it 10 times that will cause the usage to go up to 2TB.
 
-- subdomain enumeration idea. looking for staging test or dev sites always helps
+-   subdomain enumeration idea. looking for staging test or dev sites always helps
 
-```js 
-https://github.com/netsecurity-as/subfuz/blob/master/subdomain_megalist.txt 
+```js
+https://github.com/netsecurity-as/subfuz/blob/master/subdomain_megalist.txt
 ```
 
 ```bash
@@ -28,32 +28,52 @@ admin.FUZZ.target.com E.G: admin.dev.target.com
 
 ```
 
+-   cencys
 
-- cencys
 ```js
 1. openup https://search.censys.io/
 2.Search the keyword with virtual host only-
 `(services.tls.certificates.leaf_data.names: anywebsite.com) and services.http.response.status_code=”200"`
 
-```
-- cencys fancy search
+- search on cencys , fofa ,zoomeye , virustotal and others
+
+
+-   cencys fancy search
+
 ```html
 https://gpt.censys.io/
 ```
 
 url would look like
+
 ```js
 https://youraccount.blob.core.windows.net/?restype=container&comp=list&sv=2022-11-02&se=2023-05-24T09:51:36Z&sp=r&sig=<signature>
 
 ```
 
 ```js
-console.log(__BUILD_MANIFEST.sortedPages) // all paths for Next.js websites
+console.log(__BUILD_MANIFEST.sortedPages); // all paths for Next.js websites
 
-window.__NEXT_DATA__.props.pageProps //returns back the data object passed from the server-side
+window.__NEXT_DATA__.props.pageProps; //returns back the data object passed from the server-side
 ```
 
-CORS* Burp Extension. 
+-   Quickly access all js files of a target
+
+```bash
+wget -r -np -k -q <your_target_url>
+```
+
+    -r : Recursively download everything linked to the target
+    -np : Don't ascend to the parent directory of the URL target entered
+    -k : Make links in HTML and CSS point to locally downloaded files
+    -q : Be quiet (no output to screen)
+
+output example
+
+![alt text](image-1.png)
+
+
+CORS\* Burp Extension.
 scans for cors misconfigurations.
 
 ### fuzzing for xss
@@ -61,5 +81,3 @@ scans for cors misconfigurations.
 I initiated fuzzing on the sign-up page using a wordlist of ==JavaScript variable names==.
 
 During this process, I observed that a parameter name `appURL` was being ==reflected== within a script tag.
-
-
