@@ -133,7 +133,7 @@ naabu -list basedomain.txt -top-ports 1000 -exclude-ports 80,443,21,22,25 -o por
 naabu -list basedomain.txt -p -  -exclude-ports 80,443,21,22,25 -o ports.txt
 
 # optimized
-naabu -p - -rate 2000 -c 50 -retries 2 -warm-up-time 1 -silent -host $DOMAIN -nmap-cli 'nmap -sV -oX scan.xml'
+naabu -p - -rate 2000 -c 50 -retries 2 -warm-up-time 1 -silent -list $DOMAINLIST_FILE  -nmap-cli 'nmap -sV -oA scanResults'
 
 ```
 
