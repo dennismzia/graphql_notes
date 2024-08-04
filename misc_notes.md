@@ -81,3 +81,13 @@ scans for cors misconfigurations.
 I initiated fuzzing on the sign-up page using a wordlist of ==JavaScript variable names==.
 
 During this process, I observed that a parameter name `appURL` was being ==reflected== within a script tag.
+
+
+- Fuzzing for Api Docs in different locations on applications behind reverse proxies.
+`
+❌ GET /api/cbma/userauthorization/services/profile/validate/v1/swagger-ui/index.html
+❌ GET /api/cbma/userauthorization/services/profile/validate/swagger-ui/index.html
+❌ GET /api/cbma/userauthorization/services/profile/swagger-ui/index.html
+❌ GET /api/cbma/userauthorization/services/swagger-ui/index.html
+✅ GET /api/cbma/userauthorization/swagger-ui/index.html
+`
