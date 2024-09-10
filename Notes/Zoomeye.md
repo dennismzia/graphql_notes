@@ -26,3 +26,8 @@
 5. **Operating System (OS) Search**:  
    `os:Windows`  
    `os:Linux`
+
+6. **domain search**:
+    `domain:*.example.com`
+    `cert:"example.com"`
+    `domain:test`
