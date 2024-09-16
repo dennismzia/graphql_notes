@@ -198,3 +198,10 @@ circular queries
 inql -f /home/kali/introspection_query.json --generate-cycles -o dvga_cycles
 
 ```
+
+-To generate a SHA-256 hash of any query, you can use the sha256sum
+command, like so:
+
+```bash
+echo -n "{query{pastes{owner{id}}}}" | sha256sum
+```
