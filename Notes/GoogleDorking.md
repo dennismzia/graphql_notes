@@ -3,6 +3,7 @@
 A list of Google Dorks for Bug Bounty, Web Application Security, and Pentesting
 
 ## understanding
+
 • \- (minus)—The dash is used to negate a term from the search results. For instance,
 cybersecurity -Cisco will provide results that contain the word cybersecurity but
 remove all entries that contain Cisco.
@@ -37,8 +38,9 @@ if you’re interested in finding results or data that was published before a ce
 • after: yyyy-mm-dd—This operator filters results after a particular time. This is useful if
 you’re interested in finding results or data that was published after a certain time.
 
-• * (asterisk)—This operator is used as a wildcard to match any keyword. For example, cyber
-* will provide results showing anything that starts with cyber.
+• \* (asterisk)—This operator is used as a wildcard to match any keyword. For example, cyber
+
+-   will provide results showing anything that starts with cyber.
 
 [Live Tool](https://taksec.github.io/google-dorks-bug-bounty/)
 
@@ -91,6 +93,7 @@ inurl:http | inurl:url= | inurl:path= | inurl:dest= | inurl:html= | inurl:data= 
 ```
 
 **LFI Prone Parameters**
+
 ````
 inurl:include | inurl:dir | inurl:detail= | inurl:file= | inurl:folder= | inurl:inc= |inurl:locate= | inurl:doc= | inurl:conf= inurl:& site:example.com
 ```
@@ -98,7 +101,9 @@ inurl:include | inurl:dir | inurl:detail= | inurl:file= | inurl:folder= | inurl:
 **RCE Prone Parameters**
 
 ````
-inurl:cmd | inurl:exec= | inurl:query= | inurl:code= | inurl:do= | inurl:run= | inurl:read=  | inurl:ping= inurl:& site:example.com
+
+inurl:cmd | inurl:exec= | inurl:query= | inurl:code= | inurl:do= | inurl:run= | inurl:read= | inurl:ping= inurl:& site:example.com
+
 ```
 
 **File upload endpoints**
@@ -125,7 +130,9 @@ inurl:cmd | inurl:exec= | inurl:query= | inurl:code= | inurl:do= | inurl:run= | 
 **Adobe Experience Manager (AEM)**
 
 ```
+
 inurl:/content/usergenerated | inurl:/content/dam | inurl:/jcr:content | inurl:/libs/granite | inurl:/etc/clientlibs | inurl:/content/geometrixx | inurl:/bin/wcm | inurl:/crx/de site:example[.]com
+
 ```
 
 **Disclosed XSS and Open Redirects**
@@ -169,3 +176,8 @@ inurl:/content/usergenerated | inurl:/content/dam | inurl:/jcr:content | inurl:/
 `site:box.com/s "example[.]com"`
 
 `site:docs.google.com inurl:"/d/" "example[.]com"`
+
+
+- further reading
+https://www.exploit-db.com/google-hacking-database.
+```
