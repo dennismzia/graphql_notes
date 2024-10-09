@@ -91,3 +91,7 @@ During this process, I observed that a parameter name `appURL` was being ==refle
 ❌ GET /api/cbma/userauthorization/services/swagger-ui/index.html
 ✅ GET /api/cbma/userauthorization/swagger-ui/index.html
 `
+
+
+if using vpn check whether you have a DNS leak
+`https://www.dnsleaktest.com/`

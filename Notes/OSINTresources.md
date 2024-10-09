@@ -1,3 +1,16 @@
+
+
+## OSINT Anonymou persona
+
+```bash
+https://www.fakenamegenerator.com/
+https://namso-gen.com/?tab=basic&network=random
+https://www.thispersondoesnotexist.com/ - pictures
+Privacy Cards: https://privacy.com/
+
+```
+
+
 ## OSINT resources
 
 ```bash
