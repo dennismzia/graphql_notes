@@ -11,3 +11,4 @@
 • TXT: This record allows the domain owner to specify a text record, which is commonly used to validate ownership of the domain
 • SRV: Used to specify a service port
 • SOA: This record is used for storing administrative information about the domain
+Public DNS servers are available to anyone on the internet and usually contain a copy of the DNS records for many registered domain names.
