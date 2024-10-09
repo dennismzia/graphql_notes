@@ -2,6 +2,44 @@
 
 A list of Google Dorks for Bug Bounty, Web Application Security, and Pentesting
 
+## understanding
+• \- (minus)—The dash is used to negate a term from the search results. For instance,
+cybersecurity -Cisco will provide results that contain the word cybersecurity but
+remove all entries that contain Cisco.
+
+• OR—This is a conditional operator to provide results of either one term or the other. For
+example, cybersecurity OR networking will provide results containing either the word cybersecurity or networking in them.
+
+• AND—This conditional operator is used to provide results that include two terms. For instance,
+football AND england will return results that contain both keywords.
+
+• intitle:—This operator is used to search for title pages that contain a specific term(s). For
+instance, intitle: administrator will search for all websites where administrator is found in the title and return these results.
+
+• inurl:—This operator searches for URLs that contain a specific keyword. For example,
+inurl:security provides all URLs that contain the keyword security.
+
+• intext:—This operator enables Google to examine whether a specific keyword is found
+within the body of a website and provide results for those websites only. For example,
+intext:cryptocurrency provides results of web pages that contain the word cryptocurrency
+within their body.
+
+• ext:/ filetype:—These operators are used to specify a file extension. For instance,
+cybersecurity filetype:pdf will provide results that contain the word cybersecurity
+and a PDF file.
+
+• site:—This operator is used to provide results for a specific domain name. For example,
+site:microsoft.com will provide results for microsoft.com only.
+
+• before: yyyy-mm-dd—This operator filters results before a particular time. This is useful
+if you’re interested in finding results or data that was published before a certain time.
+
+• after: yyyy-mm-dd—This operator filters results after a particular time. This is useful if
+you’re interested in finding results or data that was published after a certain time.
+
+• * (asterisk)—This operator is used as a wildcard to match any keyword. For example, cyber
+* will provide results showing anything that starts with cyber.
+
 [Live Tool](https://taksec.github.io/google-dorks-bug-bounty/)
 
 **Broad domain search w/ negative search**
