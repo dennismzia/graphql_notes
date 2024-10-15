@@ -95,3 +95,8 @@ During this process, I observed that a parameter name `appURL` was being ==refle
 
 if using vpn check whether you have a DNS leak
 `https://www.dnsleaktest.com/`
+
+nmap
+```
+nmap -PN -sA host -p - -o out.nmap
+```
