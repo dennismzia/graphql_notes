@@ -180,7 +180,7 @@ while IFS= read -r line; do
     filename="${host}_${port}_output.txt"
 
     # Run nmap command for each host with its port and save the output to a file
-    nmap -sV -sS -PN --spoof-mac 0  -p "$port" "$host" -oA "$filename"
+    nmap -sV -sS -Pn --spoof-mac 0  -p "$port" "$host" -oN "$filename"
 done < ports.txt
 
 ```
