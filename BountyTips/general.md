@@ -39,3 +39,8 @@ Always review public code repositories for potential token leaks.
 `curl -H 'Authorization: Bearer Auth_Token' sentry.io/api/0/organization/{memberID}/members`
 - Deleting projects
 `curl https://sentry.io/api/0/projects/{ID}/{project_id_or_slug}/  -H 'Authorization: Bearer Auth_Token'  -X DELETE`
+
+
+* sensitive exposure
+  - Add the file `appsettings.json` to your wordlist, and you might discover some juicy data. Enjoy! 
+  - settings and keys such as client secrets were exposed
