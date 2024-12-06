@@ -44,3 +44,6 @@ Always review public code repositories for potential token leaks.
 * sensitive exposure
   - Add the file `appsettings.json` to your wordlist, and you might discover some juicy data. Enjoy! 
   - settings and keys such as client secrets were exposed
+  
+* cache poisoning
+  - For cache poisoning bugs in Varnish, sending a Fastly-Key: 1 or Fastly-Debug: 1 header can sometimes reveal the cache key.
