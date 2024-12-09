@@ -1,5 +1,5 @@
 
-* Enusre target app is running and also frida server is runnign then Identify the Package Name:
+* Ensure target app is running and also frida server is runnign then Identify the Package Name:
 
 ``` bash 
 frida-ps -Ua
@@ -20,3 +20,9 @@ Once you're in the Objection REPL, you can use various commands to explore the a
 - `android hooking set return_value <class_name>.<method_name> <value>`: Modifies the return value of a function.
 - `android hooking disable`: Disables all hooks.
 - `android hooking enable`: Enables all hooks.
+
+* command to screenrecord the application
+- `adb shell screenrecord --bit-rate 8000000 /sdcard/my_recording.mp4`
+
+- `adb pull /sdcard/my_recording.mp4 `
+
