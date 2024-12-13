@@ -5,6 +5,11 @@
 frida-ps -Ua
 ```
 
+* frida trace
+```bash
+frida-trace -U -j 'io.hextree.*!*' FridaTarget
+
+```
 - objection hooking
 `objection --gadget <package_name> explore`
 
