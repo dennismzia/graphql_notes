@@ -181,3 +181,16 @@ inurl:/content/usergenerated | inurl:/content/dam | inurl:/jcr:content | inurl:/
 - further reading
 https://www.exploit-db.com/google-hacking-database.
 ```
+
+* this returns more domains than normal 
+```
+site:*<*.target.*
+
+site:*<-*.target.*
+
+site:*>*.target.*
+
+site:*->*.target.*
+
+site:*<->*.target.*
+```
