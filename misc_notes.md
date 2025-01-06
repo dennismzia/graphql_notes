@@ -105,3 +105,6 @@ nmap -PN -sA host -p - -o out.nmap
 subdomain database.
 https://dash.pugrecon.celes.in/
 ```
+
+exposed apache solr air 
+- port 8983
