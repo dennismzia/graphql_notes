@@ -108,3 +108,9 @@ https://dash.pugrecon.celes.in/
 
 exposed apache solr air 
 - port 8983
+
+ASP applications
+1. Source code exposure through Git repo.
+2. Information leak through Trace.axd endpoint
+
+Takeaway: When encountering http://asp.net applications look for Trace.axd endpoint. It might leak information.
