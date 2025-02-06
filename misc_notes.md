@@ -114,3 +114,6 @@ ASP applications
 2. Information leak through Trace.axd endpoint
 
 Takeaway: When encountering http://asp.net applications look for Trace.axd endpoint. It might leak information.
+
+allows one to commit in the past
+git commit -am "" --date "4/20/2024" 

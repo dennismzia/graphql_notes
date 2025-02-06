@@ -44,3 +44,17 @@ checking on Zoomeye
 - https://www.zoomeye.ai/gpt
 - in search bar input domain name
 - you can also filter by favicon hash
+
+checking via virustotal
+- `curl -s "https://www.virustotal.com/vtapi/v2/domain/reprot?domain=example.com&apikey=APIKEY"`
+
+checking alienvault
+- `curl -s https://otx.alienvault.com/api/v1/indicators/hostname/domain.com/url_list?limit=500&page=1| jq  -r '.url_list[]?.result?.urlworker?.ip // empty'`
+
+checking from urlscan.io
+- `curl -s https://urlscan.io/api/v1/search/q=domain:example.com&size=10000`
+- use the ui web search if api doesnt work
+
+
+If you find an ip and it doesnt resolve or something like that 
+add it to the etc/hosts file and recheck the site
