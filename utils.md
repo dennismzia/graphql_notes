@@ -61,6 +61,9 @@ ffuf -w targets.txt:TARGET -w wordlist.txt -u https://TARGET/FUZZ
 
 nohup stdbuf -oL your_command > output.log 2>&1 &
 
+# api docs fuzzing via feroxbuster
+cat live.txt | feroxbuster --stdin -A -C 404,401,502 -w /opt/wordlist/api/api2.txt -o apires
+
 feroxbuster -u http://127.0.0.1:80/ -w /opt/wordlists/compiled_raft_directories.txt
 ```
 
