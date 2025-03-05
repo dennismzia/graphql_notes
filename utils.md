@@ -82,7 +82,7 @@ nohup puredns bruteforce ~/wordlist/best-dns-wordlist.txt loom.com -r ~/wordlist
 
 # new and improved puredns bruteforcer.
 
-puredns bruteforce ~/wordlist/best-dns-wordlist.txt $DOMAIN -r /opt/wordlist/resolvers.txt -w subrute.txt --write-wildcards wildcards.txt --write-massdns from_massdns.txt
+puredns bruteforce /opt/wordlist/best-dns-wordlist.txt $DOMAIN -r /opt/wordlist/resolvers.txt -w subrute.txt --write-wildcards wildcards.txt --write-massdns from_massdns.txt
 
 # meant to loop for multilevel domains eg *.app.domain.com
 # chnage the output files for this ones
