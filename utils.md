@@ -84,11 +84,11 @@ nohup puredns bruteforce ~/wordlist/best-dns-wordlist.txt loom.com -r ~/wordlist
 
 puredns bruteforce /opt/wordlist/best-dns-wordlist.txt $DOMAIN -r /opt/wordlist/resolvers.txt -w subrute.txt --write-wildcards wildcards.txt --write-massdns from_massdns.txt
 
-# meant to loop for multilevel domains eg *.app.domain.com
-# chnage the output files for this ones
-while IFS= read -r DOMAIN; do
-    puredns bruteforce ~/wordlist/best-dns-wordlist.txt $DOMAIN -r ~/wordlist/resolvers.txt -w subrute.txt --write-wildcards wildcards.txt --write-massdns from_massdns.txt
-done < wildcards.txt
+# Latest
+# You can also bruteforce multiple domains at once with the -d option to load a text file containing domains instead of specifying a single domain as an argument:
+
+puredns bruteforce /opt/wordlist/best-dns-wordlist.txt -d domains.txt -w subrute.txt --write-wildcards wildcards.txt --write-massdns from_massdns.txt
+
 
 ```
 
