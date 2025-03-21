@@ -144,6 +144,38 @@ query {
 }
 
 ```
+-  just like above but returns more infromation of a grpahql object or input object or anything really
+
+```
+{
+  __type(name: "BrandPermissionsInput") {
+    kind
+    name
+    fields {
+      name
+      type {
+        kind
+        name
+        ofType {
+          kind
+          name
+        }
+      }
+    }
+    inputFields {
+      name
+      type {
+        kind
+        name
+        ofType {
+          kind
+          name
+        }
+      }
+    }
+  }
+}
+```
 
 - introspection query that extends above use this if above returns null
 ```gql
