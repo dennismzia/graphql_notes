@@ -221,3 +221,13 @@ done < foundsites.txt
 ```bash
 curl 'https://cms.harness.io/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'Origin: altair://-' --data-binary '{"query":"query {\n    __schema {\n        mutationType {\n            fields {\n                name\n            }\n        }\n    }\n}","variables":{}}' --compressed | jq -r '.data.__schema.mutationType.fields[] | .name' | anew mutation_wordlist.txt
 ```
+
+
+sudomain reon and general recon
+- new tool pugdns 
+- dns brutforcing to find subdomains
+- example usage below
+
+```bash
+cat common_nodes.txt  | sed 's/$/.gemini.galnagli.com/g' > wordlist.txt ./pugdns -interface enp6s0 -domains wordlist.txt -nameservers resolvers-trusted.txt -retries 10 -workers 4 
+```
