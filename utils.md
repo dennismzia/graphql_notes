@@ -229,5 +229,5 @@ sudomain reon and general recon
 - example usage below
 
 ```bash
-cat common_nodes.txt  | sed 's/$/.gemini.galnagli.com/g' > wordlist.txt ./pugdns -interface eth0 -domains wordlist.txt -nameservers resolvers-trusted.txt -retries 10 -workers 4 
+cat common_nodes.txt  | sed 's/$/.gemini.galnagli.com/g' > wordlist.txt && sudo ./pugdns -interface eth0 -domains wordlist.txt -nameservers resolvers-trusted.txt -retries 10 -workers 4 -output my_results.json
 ```
