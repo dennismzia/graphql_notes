@@ -70,6 +70,10 @@ feroxbuster -u http://127.0.0.1:80/ -w /opt/wordlists/compiled_raft_directories.
 dns brutefrocing can help find other multiple level domains
 
 ```bash
+# puredns resolving list of domains without http to find valid subdomains
+
+puredns resolve domains.txt --write valid_domains.txt --write-wildcards wildcards.txt -r /opt/wordlist/resolvers.txt
+
 # puredns dns bruteforcing
 
 puredns bruteforce wordlist.txt example.com -r resolvers.txt -w output.txt
