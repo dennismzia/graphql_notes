@@ -235,3 +235,11 @@ sudomain reon and general recon
 ```bash
 cat common_nodes.txt  | sed 's/$/.gemini.galnagli.com/g' > wordlist.txt && sudo ./pugdns -interface eth0 -domains wordlist.txt -nameservers resolvers-trusted.txt -retries 10 -workers 4 -output my_results.json
 ```
+
+subdomain permutations finding
+tools
+- gotator
+- altdns
+```
+gotator -sub allsubdomains.txt -mindup -depth 3 -perm /opt/wordlist/common_nodes.txt | head -c 1G | anew output1GSortedUnique.txt
+```
