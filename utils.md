@@ -127,6 +127,7 @@ for i in $(cat vulnIIS.txt);do echo [$i]; shortscan --fullurl $i ; done >> short
 -   oneliner for extracting js files and endpoints
 
 ```bash
+getJS -input urls.txt --complete -output jsuris
 for i in $(cat jsfiles|grep main); do echo [$i] ; linkfinder.py -i $i -o cli  ; done  >> endpointsjs
 
 for i in $(cat live.txt); do echo [ + ] $i ; getJS --url $i --complete |anew jsfiles ;done
