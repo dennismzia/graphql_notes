@@ -86,12 +86,12 @@ nohup puredns bruteforce ~/wordlist/best-dns-wordlist.txt loom.com -r ~/wordlist
 
 # new and improved puredns bruteforcer.
 
-puredns bruteforce /opt/wordlist/best-dns-wordlist.txt $DOMAIN -r /opt/wordlist/resolvers.txt -w subrute.txt --write-wildcards wildcards.txt --write-massdns from_massdns.txt
+puredns bruteforce /opt/wordlist/best-dns-wordlist.txt $DOMAIN -r /opt/wordlist/resolvers.txt -w subrute.txt --write-wildcards wildcards.txt 
 
 # Latest
 # You can also bruteforce multiple domains at once with the -d option to load a text file containing domains instead of specifying a single domain as an argument:
 
-puredns bruteforce /opt/wordlist/best-dns-wordlist.txt -d domains.txt -w subrute.txt --write-wildcards wildcards.txt --write-massdns from_massdns.txt
+puredns bruteforce /opt/wordlist/best-dns-wordlist.txt -d domains.txt -w subrute.txt --write-wildcards wildcards.txt 
 
 
 ```
