@@ -149,6 +149,7 @@ naabu -p - -rate 2000 -c 50 -retries 2 -warm-up-time 1 -silent -list $DOMAINLIST
 
 ```bash
 waymore -i domains.txt -mode U --output-urls way/archive.txt
+waymore -i domains.txt -mode U -oU way/ -oR  way/
 ```
 
 kr scan https://formx.cognism.com -w /opt/wordlists/routes-large.kite -x 5 -j 100 --fail-status-codes 400,401,404,403,501,502,426,411
