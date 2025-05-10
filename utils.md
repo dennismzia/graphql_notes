@@ -23,6 +23,13 @@ while IFS= read -r DOMAIN ; do
     gcloud compute scp --recurse cloud-instance-1:~/engagements/$DOMAIN .
 done < foundsites.txt 
 ```
+- copy files via normal ssh
+
+```bash
+while IFS= read -r DOMAIN ; do
+    scp -r  -i /opt/Azure/2ndchance.pem secondchance@20.120.226.201:~/engagements/$DOMAIN .
+done < $1
+```
 
 
 -   copying file from local machine to remote instance
