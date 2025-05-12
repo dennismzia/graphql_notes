@@ -219,6 +219,13 @@ done < wildcards.txt
 
 
 
+- bruteforcing with graphqlcop
+```bash
+for i in $(cat gql.txt); do echo "[+ $i]" ; graphqlcop -f -t $i -x http://127.0.0.1:8080 ; done >> res_gql.txt
+
+```
+
+
 -   extract mutations from introspec urls
 
 ```bash
