@@ -225,6 +225,11 @@ for i in $(cat gql.txt); do echo "[+ $i]" ; graphqlcop -f -t $i -x http://127.0.
 
 ```
 
+wget command to download urls to a folder
+```bash
+wget -c -P downloads/ -i urls.txt
+```
+
 
 -   extract mutations from introspec urls
 
