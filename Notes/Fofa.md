@@ -6,15 +6,15 @@ FOFA dorks
 - with favicon hash
 `domain="example.com" && icon_hash="xxxxxxxxxx"`
 
-- 1️⃣ HTTPS ports apart from 443
+-  HTTPS ports apart from 443
 
 `domain="example.com" && protocol="https" && port!="443"`
 `domain="example.com" && protocol="https" && port!="443" && port!="80"`
 
-- 3️⃣ Cloud Buckets
+-  Cloud Buckets
 `domain="example.com" && body="ListBucketResult"`
 
-- 4️⃣ Metrics Endpoints or Similar to it
+-  Metrics Endpoints or Similar to it
 ```
 body="http_request_duration_seconds_sum"
 body="http_requests_in_flight"
@@ -52,21 +52,21 @@ body="ghc_max_mem_in_use_bytes"
 body="ghc_gcs_total"
 ```
 
-- 5️⃣ Register
+-  Register
 `body="register" && body="login" && domain="example.com"`
 
-- 6️⃣ API Endpoints
+-  API Endpoints
 `body="/api/v1" && domain="example.com"`
 `body="/api/v2" && domain="example.com"`
 
-- 7️⃣ Admin Endpoints
+-  Admin Endpoints
 `body="/admin" && domain="example.com"`
 
--8️⃣ Information Disclosure
+- Information Disclosure
 `body="any file name that leads to info disc" && domain="example.com"`
 `body="config.txt" && domain="example.com"`
 
-- 9️⃣ API Keys in JS Files
+-  API Keys in JS Files
 
 ```
 body="any_api_key_name_you_know" && domain="example.com"
