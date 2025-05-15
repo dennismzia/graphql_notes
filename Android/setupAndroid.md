@@ -25,3 +25,8 @@ chown root:root /system/etc/security/cacerts/*
 chmod 644 /system/etc/security/cacerts/*
 chcon u:object_r:system_file:s0 /system/etc/security/cacerts/*
 ```
+
+- Aurora store - allows installing apps without playstore one can select anonymous mode or sigin with google play
+- playstore application or split applications can be installed by using a helper app called https://github.com/Aefyr/SAI/releases
+
+- 

@@ -8,11 +8,24 @@ frida-ps -Ua
 * frida trace
 ```bash
 frida-trace -U -j 'io.hextree.*!*' FridaTarget
+```
+- installing frida server
+
+```bash
+unxz frida-server-16.7.19-android-x86_64.xz
+mv frida-server-16.7.19-android-x86_64 frida-server
+adb push frida-server /data/local/tmp
+adb shell "chmod 755 /data/local/tmp/frida-server"
+adb shell "/data/local/tmp/frida-server &"
+
+#onliner
+unxz -c frida-server-16.7.19-android-x86_64.xz > frida-server && adb push frida-server /data/local/tmp/ && adb shell "chmod 755 /data/local/tmp/frida-server && /data/local/tmp/frida-server &"
 
 ```
+
 - objection hooking
 `objection --gadget <package_name> explore`
-
+`android sslpinning disable`
 * Objection Exploration:
 
 Once you're in the Objection REPL, you can use various commands to explore the app:
