@@ -247,6 +247,14 @@ done < foundsites.txt
 curl 'https://cms.harness.io/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'Origin: altair://-' --data-binary '{"query":"query {\n    __schema {\n        mutationType {\n            fields {\n                name\n            }\n        }\n    }\n}","variables":{}}' --compressed | jq -r '.data.__schema.mutationType.fields[] | .name' | anew mutation_wordlist.txt
 ```
 
+<<<<<<< HEAD
+- List All Scripts with JS
+You can list all loaded scripts on any route:
+
+```js
+Array.from(document.scripts).map(s => s.src).filter(Boolean)
+```
+=======
 
 sudomain reon and general recon
 - new tool pugdns 
@@ -264,3 +272,4 @@ tools
 ```
 gotator -sub allsubdomains.txt -mindup -depth 3 -perm /opt/wordlist/common_nodes.txt | head -c 1G | anew output1GSortedUnique.txt
 ```
+>>>>>>> 22e3036b63ec572a6c4e2d625ca0d5ed36917d60
