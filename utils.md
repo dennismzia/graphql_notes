@@ -1,21 +1,3 @@
--   logging into cloud
-
-```bash
-gcloud compute ssh  "cloud-instance-1" --project "security-assessment-project" --zone "us-central1-f"
-```
-
-
-
-
--   for copying from gcloud to local machine
-
-```bash
-gcloud compute scp --zone "us-west1-a" --recurse cloud-instance-1:~/engagements/* .
-gcloud compute scp --recurse cloud-instance-1:~/engagements/loom.com .
-gcloud compute scp --zone "us-central1-f" --recurse cloud-instance-1:~/engagements/* .
-aputime.com
-```
-
 -   copying multiple files from server to local machine
 
 ```bash
@@ -29,15 +11,6 @@ done < foundsites.txt
 while IFS= read -r DOMAIN ; do
     scp -r  -i /opt/Azure/2ndchance.pem secondchance@20.120.226.201:~/engagements/$DOMAIN .
 done < $1
-```
-
-
--   copying file from local machine to remote instance
-
-```bash
-gcloud compute scp LOCAL_FILE_PATH VM_NAME:REMOTE_DIR
-
-gcloud compute scp LOCAL_FILE_PATH cloud-instance-1:REMOTE_DIR
 ```
 
 -   make names in txt file appear on one line
@@ -99,8 +72,6 @@ puredns bruteforce /opt/wordlist/best-dns-wordlist.txt $DOMAIN -r /opt/wordlist/
 # You can also bruteforce multiple domains at once with the -d option to load a text file containing domains instead of specifying a single domain as an argument:
 
 puredns bruteforce /opt/wordlist/best-dns-wordlist.txt -d domains.txt -w subrute.txt --write-wildcards wildcards.txt 
-
-
 ```
 
 -   oneliner for bruteforcing grahql endpoints in found targets
@@ -201,9 +172,14 @@ done < ports.txt
 
 ```
 
+```bash
+while IFS= read -r DOMAIN ; do
+echo $DOMAIN
+done < wildcards.txt
 
 nmap
 sudo nmap -sT -PN --spoof-mac 0 172.30.1.45 -D  172.30.1.20,172.30.1.21,172.30.1.22
+```
 
 ```bash
 for i in $(cat | targets); do ./subdomain.sh $i ;done
@@ -213,9 +189,7 @@ while IFS= read -r line; do
 done < foundsites
 ```
 
-while IFS= read -r DOMAIN ; do
-echo $DOMAIN
-done < wildcards.txt
+
 
 
 
@@ -247,14 +221,6 @@ done < foundsites.txt
 curl 'https://cms.harness.io/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'Origin: altair://-' --data-binary '{"query":"query {\n    __schema {\n        mutationType {\n            fields {\n                name\n            }\n        }\n    }\n}","variables":{}}' --compressed | jq -r '.data.__schema.mutationType.fields[] | .name' | anew mutation_wordlist.txt
 ```
 
-<<<<<<< HEAD
-- List All Scripts with JS
-You can list all loaded scripts on any route:
-
-```js
-Array.from(document.scripts).map(s => s.src).filter(Boolean)
-```
-=======
 
 sudomain reon and general recon
 - new tool pugdns 
@@ -269,7 +235,7 @@ subdomain permutations finding
 tools
 - gotator
 - altdns
-```
+
+```bash
 gotator -sub allsubdomains.txt -mindup -depth 3 -perm /opt/wordlist/common_nodes.txt | head -c 1G | anew output1GSortedUnique.txt
 ```
->>>>>>> 22e3036b63ec572a6c4e2d625ca0d5ed36917d60
