@@ -13,6 +13,12 @@ while IFS= read -r DOMAIN ; do
 done < $1
 ```
 
+- append the .map suffix to js files to seee whether map files are available
+```bash
+cat jsuris | sed 's/$/.map/' | httpx -sc -td -fr -title
+
+```
+
 -   make names in txt file appear on one line
 
 ```bash
