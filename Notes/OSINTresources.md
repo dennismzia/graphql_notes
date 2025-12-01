@@ -1,6 +1,6 @@
 
 
-## OSINT Anonymou persona
+## OSINT Anonymous persona
 
 ```bash
 https://www.fakenamegenerator.com/
