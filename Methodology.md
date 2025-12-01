@@ -6,3 +6,7 @@
 checklist of bugs to consideer
 - prototype pollution both client side and server side.
 - 
+
+Browser extensions
+gecko - for client side path traversal detection
+Fancy tracker - for post message detector
